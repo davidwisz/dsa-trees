@@ -8,7 +8,8 @@ beforeEach(function() {
   emptyTree = new BinaryTree();
 
   // build small tree;
-  let smallLeft = new BinaryTreeNode(5);
+  let smallLeftChild = new BinaryTreeNode(1);
+  let smallLeft = new BinaryTreeNode(4, smallLeftChild);
   let smallRight = new BinaryTreeNode(5);
   let smallRoot = new BinaryTreeNode(6, smallLeft, smallRight);
   smallTree = new BinaryTree(smallRoot);
@@ -37,7 +38,7 @@ describe("minDepth", function() {
     expect(emptyTree.minDepth()).toBe(0);
   });
 });
-/*
+
 describe("maxDepth", function() {
   it("handles simple trees", function() {
     expect(smallTree.maxDepth()).toBe(2);
@@ -56,7 +57,7 @@ describe("maxSum", function() {
   it("handles simple trees", function() {
     expect(smallTree.maxSum()).toBe(16);
   });
-
+/*
   it("handles empty trees", function() {
     expect(emptyTree.maxSum()).toBe(0);
   });
@@ -75,9 +76,9 @@ describe("maxSum", function() {
     let tree = new BinaryTree(root);
 
     expect(tree.maxSum()).toBe(109);
-  });
+  });*/
 });
-
+/*
 describe("nextLarger", function() {
   it("handles simple trees", function() {
     expect(smallTree.nextLarger(4)).toBe(5);
